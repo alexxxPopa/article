@@ -1,5 +1,5 @@
 package article
 
 type Connection interface{
-	findTitle() string
+	isDuplicateTitle(title string) bool
 }

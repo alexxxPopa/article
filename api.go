@@ -6,6 +6,10 @@ type API struct {
 	conn Connection
 }
 
-func (api API) findTitle() string {
-	return api.conn.findTitle()
+func (api API) isDuplicateTitle(title string) string {
+
+	if api.conn.isDuplicateTitle(title) {
+		return "No good"
+	}
+	return "good to go"
 }
