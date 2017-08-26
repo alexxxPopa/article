@@ -4,7 +4,6 @@ import (
 	"testing"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/mock"
-	//"github.com/stretchr/testify/suite"
 )
 
 // Mock is the workhorse used to track activity on another object.
@@ -23,7 +22,7 @@ func TestApi(t *testing.T) {
 	api :=  API{
 		conn: conn,
 	}
-	conn.On("isDuplicateTitle","Moby-Dick").Return(true)
+	conn.On("isTitleUnique","Moby-Dick").Return(true)
 
 	assert.Equal(t,api.isDuplicateTitle("Moby-Dick"), "No good")
 }
