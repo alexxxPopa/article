@@ -8,7 +8,7 @@ type API struct {
 
 func (api API) isDuplicateTitle(title string) string {
 
-	if api.conn.isDuplicateTitle(title) {
+	if api.conn.isTitleUnique(title) {
 		return "No good"
 	}
 	return "good to go"

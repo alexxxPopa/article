@@ -12,7 +12,7 @@ type MockedConnection struct {
 	mock.Mock
 }
 
-func (mock *MockedConnection) isDuplicateTitle(title string) bool {
+func (mock *MockedConnection) isTitleUnique(title string) bool {
 	args := mock.Called(title)
 	return args.Bool(0)
 }
